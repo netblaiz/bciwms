@@ -1,0 +1,16 @@
+#godaddy users
+#Options +MultiViews
+#RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteEngine On 
+#RewriteCond %{HTTP_HOST} ^zeta\.one [NC]
+#RewriteCond %{SERVER_PORT} 80 
+#RewriteRule ^(.*)$ https://www.zeta.one/$1 [R,L]
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L,QSA]
+
+ErrorDocument 404 /bciwms/404

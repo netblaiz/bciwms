@@ -1,0 +1,30 @@
+
+RewriteEngine On
+
+RewriteRule ^tokenwrong(.*)$ tokenwrong.php [L,QSA]
+RewriteRule ^tokenexpired(.*)$ tokenexpired.php [L,QSA]
+RewriteRule ^tokendead(.*)$ tokendead.php [L,QSA]
+
+RewriteRule ^questionnaire/(.*)$ questionnaire.php?token=$1 [NC,L]
+RewriteRule ^questionnaire1/(.*)$ questionnaire1.php?token=$1 [NC,L]
+RewriteRule ^questionnaire2/(.*)$ questionnaire2.php?token=$1 [NC,L]
+RewriteRule ^questionnaire3/(.*)$ questionnaire3.php?token=$1 [NC,L]
+RewriteRule ^questionnaire4/(.*)$ questionnaire4.php?token=$1 [NC,L]
+RewriteRule ^questionnairesummary/(.*)$ questionnairesummary.php?token=$1 [NC,L]
+RewriteRule ^questionnaireuploads/(.*)$ questionnaireuploads.php?token=$1 [NC,L]
+
+RewriteRule ^reference/(.*)$ reference.php?token=$1 [NC,L]
+RewriteRule ^referencesummary/(.*)$ referencesummary.php?token=$1 [NC,L]
+RewriteRule ^referenceuploads/(.*)$ referenceuploads.php?token=$1 [NC,L]
+
+RewriteRule ^guarantor/(.*)$ guarantor.php?token=$1 [NC,L]
+RewriteRule ^guarantorsummary/(.*)$ guarantorsummary.php?token=$1 [NC,L]
+RewriteRule ^guarantoruploads/(.*)$ guarantoruploads.php?token=$1 [NC,L]
+
+RewriteRule ^company/(.*)$ company.php?token=$1 [NC,L]
+RewriteRule ^companysummary/(.*)$ companysummary.php?token=$1 [NC,L]
+RewriteRule ^companyuploads/(.*)$ companyuploads.php?token=$1 [NC,L]
+
+RewriteRule ^summarytopdf/(.*)$ summarytopdf.php?token=$1 [NC,L]
+
+
